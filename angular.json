@@ -31,7 +31,7 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-              "node_modules/startbootstrap-sb-admin-2/css/sb-admin-2.min.css",
+              "node_modules/startbootstrap-sb-admin-2/dist/css/sb-admin-2.min.css",
               "src/styles.scss"
             ],
             "scripts": []

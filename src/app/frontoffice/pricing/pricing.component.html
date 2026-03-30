@@ -47,8 +47,8 @@
     </ul>
     
     <div class="lp-navbar__actions">
-      <a routerLink="/login" class="lp-btn lp-btn--ghost">Connexion</a>
-      <a routerLink="/login" class="lp-btn lp-btn--primary">Commencer</a>
+      <a routerLink="/login" class="lp-btn lp-btn--primary">Connexion</a>
+      <a routerLink="/login" [queryParams]="{ tab: 'register' }" class="lp-btn lp-btn--primary">Commencer</a>
     </div>
   </div>
 </nav>
@@ -237,12 +237,9 @@
         <h2 class="lp-cta__title">Rejoignez des milliers<br>de patients satisfaits</h2>
         <p class="lp-cta__sub">Choisissez votre forfait et commencez votre parcours de santé dès aujourd'hui. C'est gratuit pour les 7 premiers jours!</p>
         <div class="lp-cta__actions">
-          <a routerLink="/auth/register" class="lp-btn lp-btn--white lp-btn--lg">
+          <a routerLink="/login" class="lp-btn lp-btn--white lp-btn--lg">
             <i class="fas fa-rocket"></i>
             Démarrer gratuitement
-          </a>
-          <a routerLink="/about" class="lp-btn lp-btn--ghost lp-btn--lg">
-            En savoir plus <i class="fas fa-arrow-right"></i>
           </a>
         </div>
         <p class="lp-cta__note">

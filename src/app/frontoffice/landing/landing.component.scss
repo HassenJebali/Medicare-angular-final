@@ -706,6 +706,7 @@ $lp-font-mono: 'JetBrains Mono', monospace;
 
   &:hover {
     border-color: $lp-primary;
+    background: #E3F2FD;
     box-shadow: $lp-shadow-blue;
     transform: translateY(-4px);
   }
@@ -1066,9 +1067,9 @@ $lp-font-mono: 'JetBrains Mono', monospace;
 
 // ── FOOTER ─────────────────────────────────────────────────────────────
 .lp-footer {
-  background: #0A0E13;
+  background: #FFFFFF;
   padding: 64px 0 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid $lp-border;
 
   &__grid {
     display: grid;
@@ -1099,12 +1100,12 @@ $lp-font-mono: 'JetBrains Mono', monospace;
 
     .lp-navbar__brand-text {
       font-size: 1.125rem;
-      color: #fff;
+      color: $lp-text;
     }
 
     p {
       font-size: 0.875rem;
-      color: rgba(255,255,255,0.4);
+      color: $lp-text-3;
       line-height: 1.7;
       margin: 0;
       max-width: 240px;
@@ -1121,17 +1122,17 @@ $lp-font-mono: 'JetBrains Mono', monospace;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
+      color: $lp-text-4;
       margin: 0 0 4px;
     }
 
     a {
       font-size: 0.875rem;
-      color: rgba(255,255,255,0.55);
+      color: $lp-text-2;
       text-decoration: none;
       transition: color 0.15s ease;
 
-      &:hover { color: #fff; }
+      &:hover { color: $lp-primary; }
     }
   }
 
@@ -1140,9 +1141,9 @@ $lp-font-mono: 'JetBrains Mono', monospace;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid $lp-border;
     font-size: 0.8125rem;
-    color: rgba(255,255,255,0.3);
+    color: $lp-text-4;
 
     @media (max-width: 480px) {
       flex-direction: column;
