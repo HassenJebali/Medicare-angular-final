@@ -1,0 +1,33 @@
+# Dependencies – installed inside the container
+node_modules/
+
+# Build output – rebuilt inside the container
+dist/
+
+# Angular CLI cache
+.angular/
+
+# Test / coverage artifacts
+coverage/
+/tmp/
+
+# Version control
+.git/
+.gitignore
+
+# IDE / editor files
+.vscode/
+.idea/
+*.launch
+.history/
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+
+# CI/CD
+.github/
+
+# Logs
+npm-debug.log
+yarn-error.log
