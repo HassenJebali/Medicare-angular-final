@@ -48,8 +48,8 @@
     </ul>
     
     <div class="lp-navbar__actions">
-      <a routerLink="/login" class="lp-btn lp-btn--ghost">Connexion</a>
-      <a routerLink="/login" class="lp-btn lp-btn--primary">Commencer</a>
+      <a routerLink="/login" class="lp-btn lp-btn--primary">Connexion</a>
+      <a routerLink="/login" [queryParams]="{ tab: 'register' }" class="lp-btn lp-btn--primary">Commencer</a>
     </div>
   </div>
 </nav>
@@ -87,7 +87,7 @@
 
         <!-- CTAs -->
         <div class="lp-hero__ctas animate-fade-in-up animate-delay-4">
-          <a routerLink="/auth/register" class="lp-btn lp-btn--primary lp-btn--lg">
+          <a routerLink="/login" [queryParams]="{ tab: 'register' }" class="lp-btn lp-btn--primary lp-btn--lg">
             <i class="fas fa-rocket me-2"></i>Démarrer gratuitement
           </a>
           <a href="#services" class="lp-btn lp-btn--ghost-dark lp-btn--lg">
@@ -231,8 +231,7 @@
 
       <div class="lp-features">
         <div *ngFor="let f of features; let i = index"
-             class="lp-feature-card"
-             [class.lp-feature-card--accent]="i === 1">
+             class="lp-feature-card">
           <div class="lp-feature-card__icon" [ngClass]="'lp-feature-card__icon--' + f.color">
             <i [class]="'fas ' + f.icon"></i>
           </div>
@@ -243,9 +242,6 @@
               <i class="fas fa-check"></i> {{ point }}
             </li>
           </ul>
-          <a [routerLink]="['/auth']" class="lp-feature-card__link">
-            En savoir plus <i class="fas fa-arrow-right"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -344,10 +340,10 @@
         <h2 class="lp-cta__title">Prêt à transformer<br>votre santé ?</h2>
         <p class="lp-cta__sub">Inscrivez-vous gratuitement et accédez à toute la puissance de l'IA médicale en moins de 2 minutes.</p>
         <div class="lp-cta__actions">
-          <a routerLink="/auth/register" class="lp-btn lp-btn--white lp-btn--lg">
+          <a routerLink="/login" [queryParams]="{ tab: 'register' }" class="lp-btn lp-btn--white lp-btn--lg">
             <i class="fas fa-user-plus me-2"></i>Créer un compte gratuit
           </a>
-          <a routerLink="/auth" class="lp-btn lp-btn--ghost lp-btn--lg">
+          <a routerLink="/login" class="lp-btn lp-btn--ghost lp-btn--lg">
             Déjà inscrit ? Se connecter
           </a>
         </div>

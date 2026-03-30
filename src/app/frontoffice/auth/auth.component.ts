@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Router } from '@angular/router';
+import { RouterModule, Router, ActivatedRoute } from '@angular/router';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { NavigationService, UserRole } from '../../services/navigation.service';
@@ -55,12 +55,20 @@ export class AuthComponent implements OnInit, OnDestroy {
     private fb: FormBuilder,
     private authService: AuthService,
     private navService: NavigationService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.initializeForms();
   }
 
   ngOnInit(): void {
+    this.route.queryParamMap
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((params) => {
+        const tab = params.get('tab');
+        this.activeTab = tab === 'register' ? 'register' : 'login';
+      });
+
     // Check if already logged in
     if (this.authService.isAuthenticated()) {
       this.router.navigate(['/dashboard']);

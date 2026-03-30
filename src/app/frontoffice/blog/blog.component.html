@@ -48,8 +48,8 @@
     </ul>
     
     <div class="lp-navbar__actions">
-      <a routerLink="/login" class="lp-btn lp-btn--ghost">Connexion</a>
-      <a routerLink="/login" class="lp-btn lp-btn--primary">Commencer</a>
+      <a routerLink="/login" class="lp-btn lp-btn--primary">Connexion</a>
+      <a routerLink="/login" [queryParams]="{ tab: 'register' }" class="lp-btn lp-btn--primary">Commencer</a>
     </div>
   </div>
 </nav>
